@@ -1,9 +1,11 @@
+import CountChart from '@/components/CountChart/CountChart';
 import UserCard from '@/components/UserCard/UserCard';
 import './admin.scss';
 
 const AdminPage = () => {
     return (
         <div className='admin'>
+            {/* LEFT */}
             <div className="admin__left">
                 {/* USER CARDS */}
                 <div className="admin__left-userCards">
@@ -12,7 +14,19 @@ const AdminPage = () => {
                     <UserCard type='parent' />
                     <UserCard type='staff' />
                 </div>
+                {/* MIDDLE CHARTS */}
+                <div className="admin__left-middleCharts">
+                    {/* COUNT CHART */}
+                    <div className="admin__left-countChart">
+                        <CountChart />
+                    </div>
+                    {/* ATTENDANCE CHART */}
+                    <div className="admin__left-attendanceChart"></div>
+                </div>
+                {/* BOTTOM CHARTS */}
+                <div className="admin__left-bottomCharts"></div>
             </div>
+            {/* RIGHT */}
             <div className="admin__right">r</div>
         </div>
     )
