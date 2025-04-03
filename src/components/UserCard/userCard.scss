@@ -1,0 +1,42 @@
+
+.userCard {
+    padding: 1rem;
+    border-radius: 1rem;
+    flex: 1;
+    min-width: 130px;
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            font-size: 10px;
+            background-color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            color: #10b981;
+        }
+    }
+
+    h1 {
+        font-size: 1.5rem; 
+        font-weight: 600; 
+        margin: 1rem 0;
+    }
+
+    h2 {
+        text-transform: capitalize;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #6b7280;
+    }
+}
+
+.userCard:nth-child(odd) {
+    background-color: var(--lamaPurple);
+}
+
+.userCard:nth-child(even) {
+    background-color: var(--lamaYellow);
+}
