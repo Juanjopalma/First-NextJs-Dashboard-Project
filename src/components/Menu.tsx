@@ -1,3 +1,7 @@
+import Link from "next/link";
+import Image from "next/image";
+import './menu.scss';
+
 const menuItems = [
   {
     title: "MENU",
@@ -112,3 +116,24 @@ const menuItems = [
     ],
   },
 ];
+
+
+const Menu = () => {
+  return (
+    <div className="menu">
+      {menuItems.map(i => (
+        <div className="menu__items" key={i.title}>
+          <span className="menu__items-span">{i.title}</span>
+          {i.items.map(item => (
+            <Link key={item.label} href={item.href} className="menu__subitems">
+              <Image src={item.icon} alt="" width={20} height={20} />
+              <span>{item.label}</span>
+            </Link>
+          ))}
+        </div>
+      ))}
+      </div>
+  )
+}
+
+export default Menu;

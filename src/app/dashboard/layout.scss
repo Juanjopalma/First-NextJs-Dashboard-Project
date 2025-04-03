@@ -6,10 +6,67 @@
 
 .sidebar {
     width: 14%;
-    background-color: #fed7d7;
+    padding: 1rem;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        span {
+            display: none;
+        }
+    }
 }
 
 .panel {
     width: 86%;
-    background-color: #bfdbfe;
+    background: #F7F8FA;
+    overflow-y: auto;
+}
+
+
+// Media Queries
+
+// md
+@media (min-width: 768px) {
+    .sidebar {
+        width: 8%;
+    }
+
+    .panel {
+        width: 92%;
+    }
+}
+
+// lg
+@media (min-width: 1024px) {
+    .sidebar {
+        width: 16%;
+
+        &__logo {
+            display: flex;
+            justify-content: flex-start;
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    .panel {
+        width: 84%;
+    }
+}
+
+// xl
+@media (min-width: 1280px) {
+    .sidebar {
+        width: 14%;
+    }
+
+    .panel {
+        width: 86%;
+    }
 }

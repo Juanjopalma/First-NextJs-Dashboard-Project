@@ -1,0 +1,51 @@
+
+.menu {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__items-span {
+        display: none;
+        color: #9ca3af;
+        font-weight: 300;
+        margin: 1rem 0;
+    }
+
+    &__subitems {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.25rem 0;
+        color: #6b7280;
+
+        span {
+            display: none;
+        }
+    }
+}
+
+
+// Media Queries
+
+// lg 
+@media (min-width: 1024px){
+ .menu {
+    &__items-span {
+        display: block;
+    }
+
+    &__subitems {
+        justify-content: flex-start;
+
+        span {
+            display: block;
+        }
+    }
+ }
+}
