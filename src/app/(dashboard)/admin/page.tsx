@@ -3,6 +3,7 @@ import AttendanceChart from '@/components/AttendanceChart/AttendanceChart';
 import CountChart from '@/components/CountChart/CountChart';
 import UserCard from '@/components/UserCard/UserCard';
 import EventCalendar from '@/components/EventCalendar/EventCalendar';
+import Announcements from '@/components/Announcements/Announcements';
 import './admin.scss';
 
 const AdminPage = () => {
@@ -36,6 +37,7 @@ const AdminPage = () => {
             {/* RIGHT */}
             <div className="admin__right">
                 <EventCalendar />
+                <Announcements />
             </div>
         </div>
     )
