@@ -2,6 +2,7 @@ import FinanceChart from '@/components/FinanceChart/FinanceChart';
 import AttendanceChart from '@/components/AttendanceChart/AttendanceChart';
 import CountChart from '@/components/CountChart/CountChart';
 import UserCard from '@/components/UserCard/UserCard';
+import EventCalendar from '@/components/EventCalendar/EventCalendar';
 import './admin.scss';
 
 const AdminPage = () => {
@@ -33,7 +34,9 @@ const AdminPage = () => {
                 </div>
             </div>
             {/* RIGHT */}
-            <div className="admin__right">r</div>
+            <div className="admin__right">
+                <EventCalendar />
+            </div>
         </div>
     )
 }
