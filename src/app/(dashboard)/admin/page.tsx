@@ -1,3 +1,4 @@
+import AttendanceChart from '@/components/AttendanceChart/AttendanceChart';
 import CountChart from '@/components/CountChart/CountChart';
 import UserCard from '@/components/UserCard/UserCard';
 import './admin.scss';
@@ -21,7 +22,9 @@ const AdminPage = () => {
                         <CountChart />
                     </div>
                     {/* ATTENDANCE CHART */}
-                    <div className="admin__left-attendanceChart"></div>
+                    <div className="admin__left-attendanceChart">
+                        <AttendanceChart />
+                    </div>
                 </div>
                 {/* BOTTOM CHARTS */}
                 <div className="admin__left-bottomCharts"></div>
