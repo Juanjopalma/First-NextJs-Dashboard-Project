@@ -48,6 +48,7 @@ const CountChart = () => {
                         <RadialBar background dataKey="count" />
                     </RadialBarChart>
                 </ResponsiveContainer>
+                <Image src="/maleFemale.png" alt="" width={50} height={50} />
             </div>
 
             {/* BOTTOM */}
