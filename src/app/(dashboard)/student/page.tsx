@@ -1,7 +1,14 @@
+import './student.scss';
+
 
 const StudentPage = () => {
     return (
-        <div>StudentPage</div>
+        <div className='student'>
+            {/* LEFT */}
+            <div className=""></div>
+            {/* RIGHT */}
+            <div className=""></div>
+        </div>
     )
 }
 
