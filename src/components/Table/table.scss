@@ -1,0 +1,27 @@
+
+.table {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: left;
+    color: #6B7280;
+    font-size: 0.875rem;
+
+    .md-tableCell, 
+    .lg-tableCell {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .md-tableCell {
+        display: table-cell;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .lg-tableCell {
+        display: table-cell;
+    }
+}

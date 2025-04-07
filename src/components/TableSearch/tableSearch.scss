@@ -1,0 +1,25 @@
+.tableSearch {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    box-shadow: 0 0 0 1.5px #d1d5db;
+    padding: 0 0.5rem;
+
+    input {
+        width: 200px;
+        padding: 0.5rem;
+        background: transparent;
+        outline: none;
+    }
+}
+
+
+// md
+@media (min-width: 768px) {
+    .tableSearch {
+        width: auto;
+    }
+}
