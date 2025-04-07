@@ -37,7 +37,7 @@
 
 
 // Media Queries
-
+// md
 @media (min-width: 768px) {
     .menu {
         &__subitems {
@@ -46,8 +46,8 @@
     }
 }
 
-// lg 
-@media (min-width: 1024px){
+// xl
+@media (min-width: 1280px){
  .menu {
     &__items-span {
         display: block;
