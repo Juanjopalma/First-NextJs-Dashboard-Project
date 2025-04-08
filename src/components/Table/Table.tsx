@@ -8,9 +8,11 @@ interface Column {
 
 interface TableProps {
     columns: Column[]; 
+    renderRow: (item:any) => React.ReactNode;
+    data: any[];
 }
 
-const Table = ({ columns }: TableProps ) => {
+const Table = ({ columns, renderRow, data }: TableProps ) => {
     return (
         <table className="table">
             <thead>
@@ -20,6 +22,9 @@ const Table = ({ columns }: TableProps ) => {
                     ))}
                 </tr>
             </thead>
+            <tbody>
+                {data.map(item => renderRow(item))}
+            </tbody>
         </table>
     )
 }

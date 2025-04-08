@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Pagination from '@/components/Pagination/Pagination';
 import Table from '@/components/Table/Table';
 import './teachers.scss';
+import Link from 'next/link';
+import { role, teachersData } from '@/lib/data';
 
 type Teacher = {
     id: number;
@@ -58,7 +60,46 @@ type Teacher = {
     }
   ];
 
+
 const TeacherListPage = () => {
+
+    const renderRow = (item: Teacher) => (
+      <tr key={item.id} className='teacherlistPage__tr'>
+        <td className='teacherlistPage__td1'>
+          <Image 
+            className='teacherlistPage__td1-image' 
+            src={item.photo} 
+            alt='' 
+            width={40} 
+            height={40} 
+          />
+          <div className="teacherlistPage__td1-nameAndEmail">
+            <h3 className=''>{item.name}</h3>
+            <p>{item?.email}</p>
+          </div>
+        </td>
+        <td className='teacherlistPage__td2'>{item.teacherId}</td>
+        <td className='teacherlistPage__td2'>{item.subjects.join(",")}</td>
+        <td className='teacherlistPage__td2'>{item.classes.join(",")}</td>
+        <td className='teacherlistPage__td2'>{item.phone}</td>
+        <td className='teacherlistPage__td2'>{item.address}</td>
+        <td className='teacherlistPage__td3'>
+          <div>
+            <Link href={`/list/teachers/${item.id}`}>
+              <button className='teacherlistPage__td3-button1'>
+                <Image src="/view.png" alt='' width={16} height={16} />
+              </button>
+            </Link>
+            {role === "admin" && 
+                <button className='teacherlistPage__td3-button2'>
+                  <Image src="/delete.png" alt='' width={16} height={16} />
+                </button>
+              }
+          </div>
+        </td>
+      </tr>
+    )
+
     return (
         <div className="teachers">
             {/* TOP */}
@@ -80,7 +121,7 @@ const TeacherListPage = () => {
                 </div>
             </div>
             {/* LIST */}
-            <Table columns={columns} />
+            <Table columns={columns} renderRow={renderRow} data={teachersData} />
             {/* PAGINATION */}
             <Pagination />
         </div>

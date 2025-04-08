@@ -10,18 +10,123 @@
     .lg-tableCell {
         display: none;
     }
+
+    tr {
+        text-align: left;
+        color: #6b7280; 
+        font-size: 0.875rem
+    }
+
 }
 
-@media (min-width: 768px) {
 
+.teacherlistPage {
+    &__tr {
+        border-bottom: 1px solid #e5e7eb; 
+        background-color: #f8fafc; 
+        font-size: 0.875rem;
+    }
+
+    &__tr:hover {
+        background-color: #f1f5f9; 
+    }
+
+    &__tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+
+    &__td1 {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+
+        &-image {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 9999px;
+            object-fit: cover;
+        }
+
+        &-nameAndEmail {
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 0.75rem;
+                color: #6b7280;
+            }
+        }
+    }
+
+    &__td2 {
+        display: none;
+    }
+
+    &__td3 {
+        > div:first-child {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        &-button1 {
+            width: 1.75rem;
+            height: 1.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            background: var(--lamaSky);
+        }
+
+        &-button2 {
+            width: 1.75rem;
+            height: 1.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            background: var(--lamaPurple);
+        }
+    }
+}
+
+
+@media (min-width: 768px) {
     .md-tableCell {
         display: table-cell;
+    }
+
+    .teacherlistPage {
+        &__td1 {
+            
+            &-image {
+                display: none;
+            }
+        }
+
+        &__td2 {
+            display: table-cell;
+        }
     }
 }
 
 @media (min-width: 1280px) {
-
     .lg-tableCell {
         display: table-cell;
+    }
+
+    .teacherlistPage {
+        &__td1 {
+            
+            &-image {
+                display: block;
+            }
+        }
     }
 }
